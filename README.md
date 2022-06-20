@@ -1,70 +1,48 @@
-# Getting Started with Create React App
+## Q1
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+- С точки зрения пользователя хорошая верстка загружается без ошибок, стилистически приятная глазу, удобная в использовании;
+- С точки зрения менеджера проекта хорошая верстка обладает: отзывчивостью, фокусирует внимание пользователя;
+- С точки зрения дизайнера хорошая верстка приятна глазу, стильная, интересная;
+- С точки зрения верстальщика хорошая верстка не перегружена элементами, семантически корректная, валидная, кроссбраузерная, читаемая;
+- С точки зрения клиентского программиста хорошая верстка грамотно структурирована, не перегружена;
+- С точки зрения серверного программистахорошая верстка: вот здесь сложно ответить, не знаю.
 
-## Available Scripts
+## Q2
 
-In the project directory, you can run:
+Основные особенности верстки крупных многостаничных сайтов:
 
-### `npm start`
+- Компонентный подход
+- Использование БЭМ методологии
+- Использование препроцессоров
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+Из своего опыта могу показать только sarawan.ru, принимаю участие как один из frontend-стажеров.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## Q3
 
-### `npm test`
+Основные особенности кроссбраузерной и кроссплатформенной верстки:
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+- Необходимо учитывать различные движки;
+- Учитывать различное разрешение и даже плотность пикселей;
+- Использование вендорных префиксовж
 
-### `npm run build`
+Для проверки можно использовать chrome devtools, но лучше конесно тестировать на нативных платформах.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## Q4
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+Линтеры, препроцессоры, дебаггер, devtools.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## Q5
 
-### `npm run eject`
+Мне кажется самое первое - это devtools.
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+## Q6
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+Отпишусь дизайнеру, выясню когда можно ожидать дизайн элементов и продолжу дальнейшую верстку. Если дизайн задерживается - предупрежу тимлида о задержках.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+## Q7
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+- Различные каналы YouTube (Владилен Минин, Ulbi.tv как пример), телеграм-каналы, курсы Hexlet и целая гора вкладок в браузере)))
 
-## Learn More
+- JS-программирование (React);
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+- Дизайн, 3-д моделирование.
