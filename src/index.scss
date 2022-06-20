@@ -1,0 +1,238 @@
+@font-face {
+	font-family: 'Exo2.0';
+	src: url(./fonts/Exo2.0-Thin.otf) format('truetype');
+}
+
+$mainColor: #1698D9;
+$hoveredColor: #2EA8E6;
+$selectedColor: #D91667;
+$selectedHovered: #E52E7A;
+
+* {
+	padding: 0;
+	margin: 0;
+	border: 0;
+	}
+
+body {
+	background-image: url(./img/Pattern.svg);
+	height: 100vh;
+}
+
+.container {
+	max-width: 1120px;
+	margin: 0 auto;
+	height: 100vh;
+	display: flex;
+	align-items: center;
+}
+
+.shadow {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	z-index: -2;
+	background: linear-gradient(180deg, rgba(0, 0, 0, 0.5) 0%, rgba(0, 0, 0, 5e-05) 49.88%, rgba(0, 0, 0, 0.5) 100%);
+}
+
+.title {
+	font-family: 'Exo2.0';
+	font-size: 36px;
+	font-weight: 100;
+	line-height: 44px;
+	text-align: center;
+	color: #FFFFFF;
+	text-shadow: 0px 1px 1px #000000;
+	padding-top: 36px;
+	padding-bottom: 24px;
+}
+
+.products {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	gap: 80px;
+	row-gap: 0;
+	list-style: none;
+}
+
+.product{
+	&__item {
+		width: 320px;
+		height: 509px;
+		font-family: 'Trebuchet MS';
+		font-style: normal;
+		margin-bottom: 96px;
+		position: relative;
+	}
+	&__shadow {
+		position: absolute;
+		width: 100%;
+		height: 100%;
+		top: 0;
+		left: 0;
+		background: #F2F2F2;
+		mix-blend-mode: normal;
+		opacity: 0.5;
+	}
+	&__card {
+		background-color: #F2F2F2;
+		background-image: url(./img/cat.png);
+		background-repeat: no-repeat;
+		background-position: top 235px center;
+		border: 4px solid $mainColor;
+		border-radius: 12px;
+		clip-path: polygon(16% 0, 100% 0, 100% 100%, 0 100%, 0 10%);
+		height: 480px;
+		padding: 21px 0 0 51px;
+		position: relative;
+		&-disabled {
+			border: 4px solid #B3B3B3;
+			.product__weight {
+				background-color: #B3B3B3;
+			}
+			&::after {
+				background-color: #B3B3B3!important;
+			}
+			&:hover {
+				cursor: auto!important;
+				border: 4px solid #B3B3B3!important;
+				.product__weight {
+					background-color: #B3B3B3!important;
+				}
+				&::after {
+					background-color: #B3B3B3!important;
+				}
+			}
+		}
+		&::after {
+			position: absolute;
+			display: block;
+			top: -13px;
+			left : 20px;
+			background-color: #B3B3B3;
+			width: 5px;
+			height: 70px;
+			transform: rotate(45deg);
+		}
+	}
+	&__card::after {
+		content: "";
+		position: absolute;
+		display: block;
+		top: -13px;
+		left : 20px;
+		background-color: #1698D9;
+		width: 5px;
+		height: 70px;
+		transform: rotate(45deg);
+	}
+	&__card:hover {
+		cursor: pointer;
+		border: 4px solid $hoveredColor;
+		.product__weight {
+			background-color: $hoveredColor;
+		}
+		&::after {
+			background-color: $hoveredColor;
+		}
+	}
+	&__card-toggle {
+		border: 4px solid $selectedColor;
+		.product__weight {
+			background-color: $selectedColor;
+		}
+		&::after {
+			background-color: $selectedColor;
+		}
+		&:hover {
+			cursor: pointer;
+			border: 4px solid $selectedHovered;
+			.product__weight {
+				background-color: $selectedHovered;
+			}
+			&::after {
+				background-color: $selectedHovered;
+			}
+		}
+	}
+
+	&__text {
+		font-weight: 400;
+		font-size: 16px;
+		line-height: 19px;
+		color: #666666;
+		margin-bottom: 5px;
+		&-small {
+			font-size: 14px;
+			line-height: 16px;
+		}
+		span {
+			font-weight: 700;
+		}
+	}
+	&__title {
+		font-weight: 700;
+		font-size: 48px;
+		line-height: 56px;
+		color: #000000;
+		&-small {
+			font-size: 24px;
+			line-height: 28px;
+			margin-bottom: 15px;
+		}
+	}
+	&__weight {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		position: absolute;
+		bottom: 16px;
+		right: 16px;
+		width: 80px;
+		height: 80px;
+		border-radius: 50%;
+		background-color: $mainColor;
+		font-size: 42px;
+		line-height: 22px;
+		color: #FFFFFF;
+		span {
+			margin-top: 10px;
+			font-size: 21px;
+			line-height: 11px;
+		}
+	}
+	&__footer {
+		font-weight: 400;
+		font-size: 13px;
+		line-height: 15px;
+		text-align: center;
+		color: #FFFFFF;
+		margin-top: 14px;
+		a {
+			text-decoration: underline dashed;
+			color: $mainColor;
+		}
+		&-disabled {
+			color: #FFFF66;
+		}
+	}
+}
+
+@media (max-width: 1120px) {
+	.container {
+		align-items: baseline;
+	}
+	.App {
+		background: linear-gradient(180deg, rgba(0, 0, 0, 0.5) 0%, rgba(0, 0, 0, 5e-05) 49.88%, rgba(0, 0, 0, 0.5) 100%);
+	}
+	.shadow {
+		background: none; 
+	}
+	.products {
+		justify-content: center;
+	}
+}
